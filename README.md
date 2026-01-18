@@ -18,3 +18,6 @@ This project is a frontend web application built as part of the IBM Front-End De
 
 ## Project Status
 This project is currently under development as part of the capstone submission.
+
+## Deployment
+This project is deployed as part of the capstone evaluation.
