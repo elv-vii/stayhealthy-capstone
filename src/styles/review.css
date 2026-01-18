@@ -1,0 +1,177 @@
+.reviewPage {
+  min-height: calc(100vh - 74px);
+  padding: 26px 28px 40px;
+  background: radial-gradient(circle at 20% 30%, #eaf2ff 0%, #d9e7ff 55%, #cfe0ff 100%);
+}
+
+.reviewContainer {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.reviewTitle {
+  font-size: 46px;
+  color: #1f3b73;
+  margin: 0 0 18px;
+  font-weight: 900;
+}
+
+.reviewTopBar {
+  background: rgba(245, 249, 255, 0.92);
+  border-radius: 22px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 260px 1fr 180px;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(31, 59, 115, 0.14);
+  margin-bottom: 20px;
+}
+
+.reviewSelect {
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(31, 59, 115, 0.18);
+
+  /* ⬇️ INI PENTING */
+  padding-left: 16px;
+  padding-right: 42px; /* kasih ruang buat arrow */
+
+  font-weight: 700;
+  color: #2c4b84;
+  background: white;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232c4b84' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+}
+
+
+.reviewSpecialty {
+  font-size: 18px;
+  color: #556ea6;
+  font-weight: 700;
+}
+
+.reviewStatus {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.reviewStatus.pending {
+  color: #e25555; /* merah Not Reviewed */
+}
+
+.reviewStatus.done {
+  color: #18a558; /* hijau Reviewed */
+}
+
+.giveTitle {
+  font-size: 42px;
+  color: #1f3b73;
+  margin: 10px 0 16px;
+  font-weight: 900;
+}
+
+.reviewForm {
+  background: rgba(245, 249, 255, 0.92);
+  border-radius: 28px;
+  padding: 20px 22px 18px;
+  box-shadow: 0 18px 45px rgba(31, 59, 115, 0.14);
+  position: relative;
+}
+
+.reviewTextarea {
+  width: 100%;
+  resize: none;
+  border-radius: 18px;
+  border: 1px solid rgba(31, 59, 115, 0.18);
+  padding: 16px 16px;
+  font-size: 18px;
+  outline: none;
+  background: white;
+  color: #2c4b84;
+  box-sizing: border-box;
+  min-height: 240px;
+}
+
+.reviewTextarea:focus {
+  border-color: rgba(31, 59, 115, 0.35);
+  box-shadow: 0 0 0 5px rgba(31, 59, 115, 0.08);
+}
+
+.reviewActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.reviewSubmit {
+  min-width: 220px;
+  height: 54px;
+  border-radius: 16px;
+  border: none;
+  background: #2c4b84;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.reviewSubmit:hover {
+  filter: brightness(1.05);
+}
+
+.reviewSubmit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.reviewReset {
+  min-width: 220px;
+  height: 54px;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 59, 115, 0.22);
+  background: white;
+  color: #2c4b84;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .reviewTitle {
+    font-size: 38px;
+  }
+
+  .giveTitle {
+    font-size: 34px;
+  }
+
+  .reviewTopBar {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .reviewStatus {
+    text-align: left;
+  }
+
+  .reviewActions {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+
+  .reviewSubmit,
+  .reviewReset {
+    width: 100%;
+  }
+}

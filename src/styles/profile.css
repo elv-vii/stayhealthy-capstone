@@ -1,0 +1,86 @@
+.pageShell{
+  min-height: calc(100vh - 70px);
+  padding: 34px 40px;
+  background: linear-gradient(180deg, #eaf2ff 0%, #d9e7ff 100%);
+}
+
+.panel{
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(243,247,255,0.9);
+  border-radius: 34px;
+  padding: 28px 34px;
+  box-shadow: 0 18px 55px rgba(31, 59, 115, 0.16);
+}
+
+.panelTitle{
+  margin: 0 0 18px;
+  font-size: 46px;
+  color: #1f3b73;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.profileForm{
+  max-width: 520px;
+  display: grid;
+  gap: 12px;
+}
+
+.profileLabel{
+  font-weight: 800;
+  color: #1f3b73;
+  font-size: 16px;
+}
+
+.profileInput{
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(31, 59, 115, 0.16);
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.profileInput:focus{
+  border-color: rgba(31, 59, 115, 0.35);
+  box-shadow: 0 0 0 4px rgba(31, 59, 115, 0.08);
+}
+
+.profileBtns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btnPrimary,
+.btnSecondary{
+  height: 44px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btnPrimary{
+  border: none;
+  background: #2c4b84;
+  color: #fff;
+}
+
+.btnPrimary:hover{
+  filter: brightness(1.05);
+}
+
+.btnSecondary{
+  border: 1px solid rgba(31, 59, 115, 0.22);
+  background: #fff;
+  color: #2c4b84;
+}
+
+.profileSaved{
+  margin-top: 6px;
+  font-weight: 800;
+  color: #2c4b84;
+}

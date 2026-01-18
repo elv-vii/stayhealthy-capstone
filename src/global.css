@@ -1,0 +1,398 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #5a74a8;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 18px 14px 44px;
+  border-radius: 14px;
+  border: 1px solid #d0dcf5;
+  font-size: 14px;
+  outline: none;
+}
+.doctor-card {
+  background: #f3f7ff;
+  border-radius: 22px;
+  padding: 22px;
+  text-align: center;
+}
+
+.doctor-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.doctor-card button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #2c4b84;
+  color: white;
+  cursor: pointer;
+}
+/* ============ APPOINTMENT ============ */
+.apptPage{
+  padding: 34px 56px 60px;
+}
+
+.apptTitle{
+  margin: 0 0 18px;
+  font-size: 46px;
+  font-weight: 900;
+  color: #1f3b73;
+  letter-spacing: -0.02em;
+}
+
+.searchWrap{
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 59, 115, 0.18);
+  box-shadow: 0 10px 26px rgba(31, 59, 115, 0.08);
+  padding: 14px 16px 14px 48px;
+}
+
+.apptSearchIcon{
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: rgba(31, 59, 115, 0.55);
+}
+
+.apptSearch{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #1f3b73;
+  background: transparent;
+}
+
+.apptCardArea{
+  margin-top: 22px;
+  background: rgba(214, 226, 255, 0.35);
+  border-radius: 24px;
+  padding: 22px;
+  height: calc(2 * 320px + 22px); /* 2 baris */
+  overflow-y: auto;              /* scroll */
+}
+
+.apptGrid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* ============ DOCTOR CARD ============ */
+.docCard{
+  background: #f3f7ff;
+  border-radius: 22px;
+  padding: 22px 18px;
+  box-shadow: 0 16px 40px rgba(31, 59, 115, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 320px; /* biar 2 baris rapi */
+}
+
+.docAvatar{
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+}
+
+.docAvatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docName{
+  font-size: 18px;
+  font-weight: 900;
+  color: #1f3b73;
+  margin-top: 6px;
+}
+
+.docRating{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 10px;
+  color: #6b6b6b;
+  font-weight: 900;
+}
+
+.docStar{
+  font-size: 22px;
+  color: #f4c542;
+}
+
+.docSpecialty{
+  font-weight: 900;
+  text-decoration: underline;
+  color: #2c4b84;
+  margin-bottom: 6px;
+}
+
+.docExp{
+  color: #6b6b6b;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.docBtn{
+  margin-top: auto;
+  width: 70%;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: #2c4b84;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.docBtn:hover{ filter: brightness(1.05); }
+
+/* responsive */
+@media (max-width: 1100px){
+  .apptGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .apptCardArea{ height: auto; max-height: 70vh; }
+}
+@media (max-width: 640px){
+  .apptPage{ padding: 22px 16px 40px; }
+  .apptTitle{ font-size: 34px; }
+  .apptGrid{ grid-template-columns: 1fr; }
+}
+/* ===== Appointment Page ===== */
+.apptPage{
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(180deg, #eef4ff 0%, #dbe8ff 100%);
+  padding: 28px 0 40px;
+}
+
+.apptInner{
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.apptTitle{
+  font-size: 52px;
+  font-weight: 900;
+  color: #2c4b84;
+  margin: 8px 0 18px;
+  letter-spacing: -0.02em;
+}
+
+/* Search */
+.apptSearchWrap{
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.apptSearchIcon{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  opacity: 0.9;
+}
+
+.apptSearchInput{
+  width: 100%;
+  height: 58px;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 59, 115, 0.18);
+  outline: none;
+  padding: 0 16px 0 56px;
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(31,59,115,0.10);
+}
+
+.apptSearchInput:focus{
+  border-color: rgba(44, 75, 132, 0.35);
+  box-shadow: 0 0 0 5px rgba(44, 75, 132, 0.10);
+}
+
+/* Cards Shell (scroll area) */
+.apptCardsShell{
+  background: rgba(255,255,255,0.55);
+  border-radius: 26px;
+  padding: 26px;
+  box-shadow: 0 18px 45px rgba(31,59,115,0.10);
+  height: 560px;           /* ini bikin 2 baris kelihatan */
+  overflow-y: auto;        /* scroll */
+}
+
+/* Grid 4 kolom */
+.apptCardsGrid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 26px;
+}
+
+/* ===== Doctor Card ===== */
+.doctorCard{
+  background: #f3f7ff;
+  border-radius: 22px;
+  padding: 26px 20px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(31,59,115,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctorAvatarWrap{
+  width: 128px;
+  height: 128px;
+  border-radius: 999px;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+}
+
+.doctorAvatar{
+  width: 92px;
+  height: 92px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.doctorName{
+  margin-top: 14px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1f3b73;
+}
+
+.doctorRating{
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #6b6b6b;
+  font-weight: 900;
+}
+
+.doctorRating .star{
+  color: #f4c542;
+  font-size: 18px;
+}
+
+.doctorSpecialty{
+  margin-top: 10px;
+  color: #2c4b84;
+  font-weight: 900;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.doctorExp{
+  margin-top: 10px;
+  color: #6b6b6b;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.doctorBtn{
+  margin-top: 18px;
+  background: #2c4b84;
+  color: #fff;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  width: 78%;
+}
+
+.doctorBtn:hover{
+  filter: brightness(1.05);
+}
+
+/* ===== Notification Toast (Task 9) ===== */
+.notifToast{
+  position: fixed;
+  top: 92px;
+  right: 28px;
+  z-index: 9999;
+  background: #2c4b84;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 900;
+  box-shadow: 0 18px 45px rgba(31,59,115,0.22);
+  animation: toastIn 0.2s ease;
+}
+
+@keyframes toastIn{
+  from{ transform: translateY(-8px); opacity: 0; }
+  to{ transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 1200px){
+  .apptCardsGrid{ grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+  .apptCardsShell{ height: auto; }
+}
+
+@media (max-width: 640px){
+  .apptTitle{ font-size: 36px; }
+  .apptSearchInput{ height: 52px; font-size: 16px; }
+  .apptCardsGrid{ grid-template-columns: 1fr; }
+}
+.ratingRow {
+  font-size: 28px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.star {
+  color: #cbd5e1;
+  margin-right: 6px;
+}
+
+.star.active {
+  color: #facc15;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

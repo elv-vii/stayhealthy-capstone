@@ -1,0 +1,162 @@
+/* PAGE */
+.appointment-page {
+  padding: 40px 60px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f9ff, #dce9ff);
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.appointment-page h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f3b73;
+  margin-bottom: 20px;
+}
+
+/* SEARCH */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 32px;
+}
+
+.search-input {
+  width: 100%;
+  height: 54px;
+  padding: 0 18px 0 52px;
+  border-radius: 28px;
+  border: 1px solid #c9d6f2;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #8aa0c8;
+}
+
+.search-input:focus {
+  border-color: #2c4b84;
+  box-shadow: 0 0 0 4px rgba(44, 75, 132, 0.12);
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #5a74a8;
+}
+
+/* GRID */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-height: calc(2 * 320px + 28px);
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* SCROLL BAR */
+.doctor-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.doctor-grid::-webkit-scrollbar-thumb {
+  background: #b6c6e6;
+  border-radius: 8px;
+}
+
+/* CARD */
+.doctor-card {
+  background: #f3f7ff;
+  border-radius: 28px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(31, 59, 115, 0.12);
+}
+
+/* IMAGE */
+.doctor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+
+/* NAME */
+.doctor-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f3b73;
+}
+
+/* RATING */
+.rating {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #f5c518;
+  font-weight: 700;
+}
+
+/* SPECIALTY */
+.specialty {
+  color: #2c4b84;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 4px;
+}
+
+/* EXPERIENCE */
+.experience {
+  font-size: 14px;
+  color: #6f85b8;
+  margin-bottom: 14px;
+}
+
+/* BUTTON */
+.book-btn {
+  background: #2c4b84;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .doctor-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .appointment-page {
+    padding: 30px 24px;
+  }
+
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-height: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+}
